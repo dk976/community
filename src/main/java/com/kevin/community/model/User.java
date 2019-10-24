@@ -1,11 +1,30 @@
 package com.kevin.community.model;
 
 public class User {
+    private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     private String name;
     private Long accountId;
     private String token;
     private int GmtCreate;
     private int GmtModified;
+    private String bio;
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
 
     public Long getAccountId() {
         return accountId;

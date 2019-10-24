@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-//import java.io.IOException;
-
 @Component
 public class GithubProvider {
     public String getAccessToken(AccessTokenDTO accessTokenDTO) {
@@ -23,7 +21,7 @@ public class GithubProvider {
             try (Response response = client.newCall(request).execute()) {
                 String string = response.body().string();
                 String token = string.split("&")[0].split("=")[1];
-                System.out.print(string);
+                System.out.print(token);
                 return token;
             } catch (Exception e) {
                 e.printStackTrace();

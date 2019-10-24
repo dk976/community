@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>发布</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/community.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.js"></script>
 </head>
@@ -43,5 +44,38 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h2><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>发起</h2>
+            <hr/>
+            <form action="/publish" method="post">
+                <div class="form-group">
+                    <label for="title">问题标题（简单扼要）：</label>
+                    <input type="text" id="title" name="title" class="form-control" placeholder="问题标题..." th:value="${title}" >
+                </div>
+                <div class="form-group">
+                    <label for="description">问题补充（必填：请参照右侧提示）：</label>
+                    <textarea type="text" id="description" name="description" class="form-control" cols="30" rows="10" ></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tag">添加标签：</label>
+                    <input type="text" id="tag" name="tag" class="form-control" placeholder="添加标签,以,分割" th:value="${tag}">
+                </div>
+                <div class="container-fluid main">
+                    <div class="row">
+                        <div class="alert alert-danger col-lg-9 col-md-12 col-sm-12 col-xs-12" th:value="${error}" th:if="${error != null}"></div>
+                        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="btn btn-success button-publish">发布</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h3>发起问题指南</h3>
+        </div>
+    </div>
+</div>
 </body>
 </html>

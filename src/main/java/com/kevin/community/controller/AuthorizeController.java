@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
@@ -23,8 +24,6 @@ public class AuthorizeController {
 
     @Autowired
     private GithubProvider githubProvider;
-//    @Autowired
-//    private AccessTokenDTO accessTokenDTO;
     @Value("${github.client.id}")
     private String clientId;
     @Value("${github.client.secret}")
@@ -35,7 +34,8 @@ public class AuthorizeController {
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code") String code,
                            @RequestParam(name = "state") String state,
-                           HttpServletResponse response){
+                           HttpServletResponse response,
+                           HttpServletRequest request){
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(clientId);
         accessTokenDTO.setClient_secret(clientSecret);
@@ -50,8 +50,11 @@ public class AuthorizeController {
             user.setName(githubUser.getName());
             user.setAccountId(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
+            user.setToken(token);
+            System.out.println(System.currentTimeMillis());
             userMapper.insert(user);
             response.addCookie(new Cookie( "token", token));
+            request.getSession().setAttribute("user",user);
             return "redirect:/";
 
         }else {
