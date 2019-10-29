@@ -29,6 +29,6 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOList.add(questionDTO);
         }
-        return null;
+        return questionDTOList;
     }
 }
