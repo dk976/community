@@ -52,12 +52,13 @@ public class PublishController {
         }
         User user = null;
         Cookie[] cookies = request.getCookies();
+        if (cookies !=null && cookies.length != 0)
         for (Cookie cookie : cookies){
             if (cookie.getName().equals("token")){
                 String token = cookie.getValue();
                 user = userMapper.findByToken(token);
                 if (user != null){
-                    System.out.println("------------登录成功---------------");
+                    System.out.println("------------发布成功---------------");
                     request.getSession().setAttribute("user",user);
                 }
                 break;
@@ -65,7 +66,7 @@ public class PublishController {
         }
         if (user == null){
             model.addAttribute("error","用户未登录");
-            System.out.println("**********登录失败***********");
+            System.out.println("**********用户未登录***********");
             return "publish";
         }
             Question question = new Question();
