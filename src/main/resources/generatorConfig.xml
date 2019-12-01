@@ -4,9 +4,10 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <classPathEntry location="C:\Users\linda\.m2\repository\org\mybatis\generator\mybatis-generator-core\1.4.0\mybatis-generator-core-1.4.0.jar" />
+    <classPathEntry location="C:\Users\ywk13\.m2\repository\org\mybatis\generator\mybatis-generator-core\1.4.0\mybatis-generator-core-1.4.0.jar" />
 
     <context id="DB2Tables" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost/community"
                         userId="root"

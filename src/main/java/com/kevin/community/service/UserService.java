@@ -16,19 +16,19 @@ public class UserService {
     public void createOrUpdate(User user) {
         UserExample userExample = new UserExample();
         userExample.createCriteria()
-                .andAccount_idEqualTo(user.getAccount_id());
+                .andAccountIdEqualTo(user.getAccountId());
         List<User> users = userMapper.selectByExample(userExample);
         if (users.size() == 0){
-            user.setGmt_create(System.currentTimeMillis());
-            user.setGmt_modified(user.getGmt_create());
-            userMapper.insert(user);
+            user.setGmtCreate(System.currentTimeMillis());
+            user.setGmtModified(user.getGmtCreate());
+            userMapper.insertSelective(user);
         } else {
             User dbUser = users.get(0);
             User updateUser = new User();
-            dbUser.setGmt_modified(System.currentTimeMillis());
-            dbUser.setAvatar_url(user.getAvatar_url());
-            dbUser.setName(user.getName());
-            dbUser.setToken(user.getToken());
+            updateUser.setGmtModified(System.currentTimeMillis());
+            updateUser.setAvatarUrl(user.getAvatarUrl());
+            updateUser.setName(user.getName());
+            updateUser.setToken(user.getToken());
             UserExample example = new UserExample();
             example.createCriteria()
                     .andIdEqualTo(dbUser.getId());

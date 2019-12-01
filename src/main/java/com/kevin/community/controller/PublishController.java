@@ -1,6 +1,7 @@
 package com.kevin.community.controller;
 
 import com.kevin.community.dto.QuestionDTO;
+import com.kevin.community.model.Question;
 import com.kevin.community.model.User;
 import com.kevin.community.service.QuestionService;
 import org.jetbrains.annotations.NotNull;
