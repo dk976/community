@@ -4,6 +4,7 @@ import com.kevin.community.dto.PaginationDTO;
 import com.kevin.community.dto.QuestionDTO;
 import com.kevin.community.exception.CustomizeErrorCode;
 import com.kevin.community.exception.CustomizeException;
+import com.kevin.community.mapper.QuestionExtMapper;
 import com.kevin.community.mapper.QuestionMapper;
 import com.kevin.community.mapper.UserMapper;
 import com.kevin.community.model.Question;
@@ -21,6 +22,8 @@ import java.util.List;
 public class QuestionService {
     @Autowired
     private QuestionMapper questionMapper;
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
     @Autowired
     private UserMapper userMapper;
 
@@ -57,7 +60,7 @@ public class QuestionService {
         paginationDTO.setQuestions(questionDTOList);
         return paginationDTO;
     }
-    public PaginationDTO list(Integer userId, Integer page, Integer size) {
+    public PaginationDTO list(Long userId, Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalPage;
         QuestionExample questionExample = new QuestionExample();
@@ -95,7 +98,7 @@ public class QuestionService {
         paginationDTO.setQuestions(questionDTOList);
         return paginationDTO;
     }
-    public QuestionDTO getById(Integer id) {
+    public QuestionDTO getById(Long id) {
         Question question = questionMapper.selectByPrimaryKey(id);
         if (question == null){
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
@@ -110,10 +113,12 @@ public class QuestionService {
     public void createOrUpdate(Question question) {
         if (question.getId() == null){
             //创建
-
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtCreate());
-            questionMapper.insertSelective(question);
+            question.setViewCount(0);
+            question.setCommentCount(0);
+            question.setLikeCount(0);
+            questionMapper.insert(question);
 
         } else {
             //更新
@@ -134,12 +139,10 @@ public class QuestionService {
 
     }
 
-    public void incView(Integer id) {
-        Question question = questionMapper.selectByPrimaryKey(id);
-        Question updateQuestion = new Question();
-        updateQuestion.setViewCount(question.getViewCount() +1);
-        QuestionExample questionExample = new QuestionExample();
-        questionExample.createCriteria().andIdEqualTo(id);
-        questionMapper.updateByExampleSelective(updateQuestion, questionExample);
+    public void incView(Long id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
