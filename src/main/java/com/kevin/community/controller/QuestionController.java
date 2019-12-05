@@ -2,6 +2,7 @@ package com.kevin.community.controller;
 
 import com.kevin.community.dto.CommentDTO;
 import com.kevin.community.dto.QuestionDTO;
+import com.kevin.community.enums.CommentTypeEnum;
 import com.kevin.community.service.CommentService;
 import com.kevin.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class QuestionController {
                            Model model){
         QuestionDTO questionDTO = questionService.getById(id);
 
-        List<CommentDTO> comments = commentService.listByQuestionId(id);
+        List<CommentDTO> comments = commentService.listByTargeId(id, CommentTypeEnum.QUESTION);
         //增加阅读数
         questionService.incView(id);
         model.addAttribute("question",questionDTO);

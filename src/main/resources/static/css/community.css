@@ -44,13 +44,25 @@ body {
 
 .btn-comment {
     float: right;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .comment-sp {
     padding-bottom: 5px;
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
+}
+.comments{
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+.sub-comments{
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #eeeeee;
+    padding-top: 15px;
+    margin-bottom: 15px;
 }
 
 .question-cont {
@@ -67,7 +79,9 @@ body {
     font-size: 15px;
     cursor: pointer;
 }
-
+.menu .active {
+    color: #499ef3;
+}
 .menu .icon:hover {
     color: #2aabd2;
 }
