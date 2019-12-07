@@ -48,7 +48,7 @@ public class CommentService {
 
             //增加评论数
             Comment parentComment = new Comment();
-            parentComment.setId(comment.getId());
+            parentComment.setId(comment.getParentId());
             parentComment.setCommentCount(1);
             commentExtMapper.incCommentCount(parentComment);
 

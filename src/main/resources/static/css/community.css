@@ -52,6 +52,7 @@ body {
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
+
 .comments{
     padding-bottom: 5px;
     margin-bottom: 15px;
@@ -78,6 +79,13 @@ body {
     margin-right: 6px;
     font-size: 15px;
     cursor: pointer;
+}
+.menu .comment-icon{
+    font-size: 15px;
+    cursor: pointer;
+}
+.menu .comment-icon:hover{
+    color: #2aabd2;
 }
 .menu .active {
     color: #499ef3;

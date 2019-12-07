@@ -21,6 +21,7 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
 
+
     @ResponseBody //通过这个注解可以接受到前端传来的json格式的数据
     @RequestMapping(value = "/comment", method = RequestMethod.POST)
     public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
@@ -42,6 +43,7 @@ public class CommentController {
         comment.setGmtCreate(System.currentTimeMillis());
         comment.setGmtModified(System.currentTimeMillis());
         comment.setCommentator(user.getId());
+        comment.setCommentCount(0);
         comment.setLikeCount(0L);
         commentService.insert(comment);
 //        HashMap<Object, Object> objectObjectHashMap = new HashMap<>(); //用这个就可以返回给前端json的数据
