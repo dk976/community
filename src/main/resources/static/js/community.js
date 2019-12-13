@@ -113,5 +113,28 @@ function collapseComments(e) {
         }
 
     }
-
 }
+function showSelectTag() {
+    $("#select-tag").show();
+}
+
+function selectTag(e) {
+    var value = e.getAttribute("data-tag");
+    var previous = $("#tag").val();
+    if (previous.indexOf(value) == -1) {
+        if (previous) {
+            $("#tag").val(previous + ',' + value);
+        } else {
+            $("#tag").val(value);
+        }
+    }
+}
+// $(document).ready(function () {
+//     $("#showOrhide-tag").focus(function(){
+//         $("#select-tag").show();
+//     });
+//     $("#showOrhide-tag").blur(function(){
+//         $("#select-tag").css("display","none");
+//     })
+// })
+
