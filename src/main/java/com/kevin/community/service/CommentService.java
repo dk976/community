@@ -2,6 +2,8 @@ package com.kevin.community.service;
 
 import com.kevin.community.dto.CommentDTO;
 import com.kevin.community.enums.CommentTypeEnum;
+import com.kevin.community.enums.NotificationStatusEnum;
+import com.kevin.community.enums.NotificationtypeEnum;
 import com.kevin.community.exception.CustomizeErrorCode;
 import com.kevin.community.exception.CustomizeException;
 import com.kevin.community.mapper.*;
@@ -29,6 +31,8 @@ public class CommentService {
     private QuestionExtMapper questionExtMapper;
     @Autowired
     private CommentExtMapper commentExtMapper;
+    @Autowired
+    private NotificationMapper notificationMapper;
 
     @Transactional
     public void insert(Comment comment) {
@@ -51,6 +55,8 @@ public class CommentService {
             parentComment.setId(comment.getParentId());
             parentComment.setCommentCount(1);
             commentExtMapper.incCommentCount(parentComment);
+            //创建通知
+            createNotify(comment, dbComment.getCommentator(), NotificationtypeEnum.REPLY_COMMENT);
 
         } else {
             //回复问题
@@ -61,7 +67,20 @@ public class CommentService {
             commentMapper.insert(comment);
             question.setCommentCount(1);
             questionExtMapper.incCommentCount(question);
+            //创建通知
+            createNotify(comment,question.getCreator(), NotificationtypeEnum.REPLY_QUESTION);
         }
+    }
+
+    private void createNotify(Comment comment, Long receiver, NotificationtypeEnum notificationType) {
+        Notification notification = new Notification();
+        notification.setGmtCreate(System.currentTimeMillis());
+        notification.setType(notificationType.getType());
+        notification.setOuterId(comment.getParentId());
+        notification.setNotifier(comment.getCommentator());
+        notification.setStatus(NotificationStatusEnum.UNREAD.getStatus());
+        notification.setReceiver(receiver);
+        notificationMapper.insert(notification);
     }
 
     public List<CommentDTO> listByTargeId(Long id, CommentTypeEnum type) {
