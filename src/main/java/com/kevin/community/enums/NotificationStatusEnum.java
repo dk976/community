@@ -1,6 +1,6 @@
 package com.kevin.community.enums;
 
-public enum  NotificationStatusEnum {
+public enum NotificationStatusEnum {
     UNREAD(0),
     READ(1);
     private int status;

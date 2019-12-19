@@ -45,7 +45,7 @@ public class CommentController {
         comment.setCommentator(user.getId());
         comment.setCommentCount(0);
         comment.setLikeCount(0L);
-        commentService.insert(comment);
+        commentService.insert(comment,user);
 //        HashMap<Object, Object> objectObjectHashMap = new HashMap<>(); //用这个就可以返回给前端json的数据
 //        objectObjectHashMap.put("message","成功");
         return ResultDTO.okOf();
