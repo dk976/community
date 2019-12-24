@@ -1,0 +1,73 @@
+2019-12-24 16:48:49.308  INFO 6484 --- [main] c.kevin.community.CommunityApplication   : Starting CommunityApplication on linda-PC with PID 6484 (C:\Users\linda\IdeaProjects\community\target\classes started by linda in C:\Users\linda\IdeaProjects\community)
+2019-12-24 16:48:49.309  INFO 6484 --- [main] c.kevin.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-12-24 16:48:49.762  WARN 6484 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-12-24 16:48:51.068  INFO 6484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-12-24 16:48:51.101  INFO 6484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-24 16:48:51.101  INFO 6484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-12-24 16:48:51.272  INFO 6484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-24 16:48:51.273  INFO 6484 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1827 ms
+2019-12-24 16:48:52.553  INFO 6484 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-24 16:48:52.620  INFO 6484 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-24 16:48:52.885  INFO 6484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2019-12-24 16:48:52.890  INFO 6484 --- [main] c.kevin.community.CommunityApplication   : Started CommunityApplication in 4.467 seconds (JVM running for 6.07)
+2019-12-24 16:48:59.240  INFO 6484 --- [http-nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-24 16:48:59.249  INFO 6484 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-24 16:48:59.269  INFO 6484 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-12-24 16:48:59.337  INFO 6484 --- [http-nio-8083-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-24 16:48:59.567  INFO 6484 --- [http-nio-8083-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-24 16:51:16.895  INFO 5868 --- [main] c.kevin.community.CommunityApplication   : Starting CommunityApplication on linda-PC with PID 5868 (C:\Users\linda\IdeaProjects\community\target\classes started by linda in C:\Users\linda\IdeaProjects\community)
+2019-12-24 16:51:16.896  INFO 5868 --- [main] c.kevin.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-12-24 16:51:17.213  WARN 5868 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-12-24 16:51:18.575  INFO 5868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-12-24 16:51:18.618  INFO 5868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-24 16:51:18.620  INFO 5868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-12-24 16:51:18.772  INFO 5868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-24 16:51:18.773  INFO 5868 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1765 ms
+2019-12-24 16:51:19.679  INFO 5868 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-24 16:51:19.748  INFO 5868 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-24 16:51:20.015  INFO 5868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2019-12-24 16:51:20.018  INFO 5868 --- [main] c.kevin.community.CommunityApplication   : Started CommunityApplication in 3.817 seconds (JVM running for 5.294)
+2019-12-24 16:52:02.578  INFO 6600 --- [main] c.kevin.community.CommunityApplication   : Starting CommunityApplication on linda-PC with PID 6600 (C:\Users\linda\IdeaProjects\community\target\classes started by linda in C:\Users\linda\IdeaProjects\community)
+2019-12-24 16:52:02.579  INFO 6600 --- [main] c.kevin.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-12-24 16:52:02.815  WARN 6600 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-12-24 16:52:04.193  INFO 6600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-12-24 16:52:04.217  INFO 6600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-24 16:52:04.218  INFO 6600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-12-24 16:52:04.352  INFO 6600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-24 16:52:04.352  INFO 6600 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1693 ms
+2019-12-24 16:52:05.144  INFO 6600 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-24 16:52:05.219  INFO 6600 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-24 16:52:05.489  INFO 6600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2019-12-24 16:52:05.492  INFO 6600 --- [main] c.kevin.community.CommunityApplication   : Started CommunityApplication in 3.48 seconds (JVM running for 4.569)
+2019-12-24 16:52:25.452  INFO 6600 --- [http-nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-24 16:52:25.453  INFO 6600 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-24 16:52:25.464  INFO 6600 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-12-24 16:52:25.534  INFO 6600 --- [http-nio-8083-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-24 16:52:25.732  INFO 6600 --- [http-nio-8083-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-24 16:52:25.741 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2019-12-24 16:52:25.757 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: 40618231-e6be-4eb7-beae-dfbe30b67318(String)
+2019-12-24 16:52:25.769 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2019-12-24 16:52:25.818 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2019-12-24 16:52:25.819 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2019-12-24 16:52:25.820 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.N.countByExample                 : <==      Total: 1
+2019-12-24 16:52:25.848 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from question WHERE title regexp ? 
+2019-12-24 16:52:25.849 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 66(String)
+2019-12-24 16:52:25.852 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2019-12-24 16:52:25.854 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question WHERE title regexp ? order by gmt_create desc limit ?,? 
+2019-12-24 16:52:25.854 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.Q.selectBySearch                 : ==> Parameters: 66(String), 0(Integer), 5(Integer)
+2019-12-24 16:52:25.862 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.Q.selectBySearch                 : <==      Total: 5
+2019-12-24 16:52:25.863 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url , bio from user where id = ? 
+2019-12-24 16:52:25.865 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2019-12-24 16:52:25.871 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-12-24 16:52:25.880 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url , bio from user where id = ? 
+2019-12-24 16:52:25.881 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2019-12-24 16:52:25.883 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-12-24 16:52:25.884 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url , bio from user where id = ? 
+2019-12-24 16:52:25.884 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2019-12-24 16:52:25.887 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-12-24 16:52:25.889 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url , bio from user where id = ? 
+2019-12-24 16:52:25.890 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2019-12-24 16:52:25.892 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-12-24 16:52:25.893 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url , bio from user where id = ? 
+2019-12-24 16:52:25.894 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2019-12-24 16:52:25.895 DEBUG 6600 --- [http-nio-8083-exec-2] c.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1

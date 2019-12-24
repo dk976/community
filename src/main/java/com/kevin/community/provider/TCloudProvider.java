@@ -1,5 +1,7 @@
 package com.kevin.community.provider;
 
+import com.kevin.community.exception.CustomizeErrorCode;
+import com.kevin.community.exception.CustomizeException;
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.ClientConfig;
 import com.qcloud.cos.auth.BasicCOSCredentials;
@@ -93,7 +95,7 @@ public class TCloudProvider {
             String[] split = url.split("/");
             this.uploadFile2Cos(fin, split[split.length - 1]);
         } catch (FileNotFoundException e) {
-            throw new Exception("图片上传失败");
+            throw new CustomizeException(CustomizeErrorCode.FILE_UPLOAD_FAIL);
         }
     }
 

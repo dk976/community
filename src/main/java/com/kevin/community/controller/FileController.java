@@ -1,5 +1,6 @@
 package com.kevin.community.controller;
 
+import com.kevin.community.dto.FileDTO;
 import com.kevin.community.provider.TCloudProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class FileController {
     @Autowired
-    private TCloudProvider ttCloudProvider;
+    private TCloudProvider tCloudProvider;
 
     @RequestMapping("/file/upload")
     @ResponseBody
@@ -24,12 +25,15 @@ public class FileController {
         MultipartFile file = multipartRequest.getFile("editormd-image-file");
         String name = null;
         try {
-            name = ttCloudProvider.uploadFile2Cos(file);
+            name = tCloudProvider.uploadFile2Cos(file);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String imgUrl = ttCloudProvider.getImgUrl(name);
+        String imgUrl = tCloudProvider.getImgUrl(name);
         String[] split = imgUrl.split("\\.");
-        return split[0];
+        FileDTO fileDTO = new FileDTO();
+        fileDTO.setUrl(imgUrl);
+        fileDTO.setSuccess(1);
+        return fileDTO;
     }
 }
